@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.20.1.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-FEE17314E26F4430BA34DFA9B55D3BB0">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-FEE17314E26F4430BA34DFA9B55D3BB0" Version="1" BaseSiteTemplate="STS#3" Scope="Web">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Documents" Description="" DocumentTemplate="{site}/Shared Documents/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="Shared Documents" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/Shared Documents/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Shared Documents/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Shared Documents/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{2683FDAF-2B87-420A-AB85-94FE54D30ED2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/Shared Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b}" ColName="tp_CheckoutUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" Name="CheckoutUser" DisplaceOnUpgrade="TRUE" DisplayName="Checked Out To" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CheckoutUser" FromBaseType="TRUE" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Operational Plan Admin" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Operational Plan Admin" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Operational Plan Admin/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Operational Plan Admin/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Operational Plan Admin/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mdcourts.sharepoint.com/sites/StrategicCampaign2024-2029/StrategicPlan_Dev/Lists/Operational%20Plan%20Admin/AllItems.aspx" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{4CB879C4-DAEF-4E19-B4A6-0C5E415F8B24}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Operational Plan Admin/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=50">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="User" />
+                <FieldRef Name="Role" />
+                <FieldRef Name="Title" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Name" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" FromBaseType="TRUE" MaxLength="255" ColName="nvarchar1" RowOrdinal="0" Version="1" />
+            <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Name" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkTitleNoMenu" />
+                <FieldRef Name="_EditMenuTableStart2" />
+                <FieldRef Name="_EditMenuTableEnd" />
+              </FieldRefs>
+              <DisplayPattern>
+                <FieldSwitch>
+                  <Expr>
+                    <GetVar Name="FreeForm" />
+                  </Expr>
+                  <Case Value="TRUE">
+                    <Field Name="LinkTitleNoMenu" />
+                  </Case>
+                  <Default>
+                    <HTML><![CDATA[<div class="ms-vb itx" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                    <Field Name="_EditMenuTableStart2" />
+                    <HTML><![CDATA[">]]></HTML>
+                    <Field Name="LinkTitleNoMenu" />
+                    <HTML><![CDATA[</div>]]></HTML>
+                    <HTML><![CDATA[<div class="s4-ctx" onmouseover="OnChildItem(this.parentNode); return false;">]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[<a onfocus="OnChildItem(this.parentNode.parentNode); return false;" onclick="PopMenuFromChevron(event); return false;" href="javascript:;" title="Open Menu"></a>]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[</div>]]></HTML>
+                  </Default>
+                </FieldSwitch>
+              </DisplayPattern>
+            </Field>
+            <Field CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Admin&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;User&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-field-fontSizeSmall sp-css-color-MintGreenFont sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;@currentField&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Admin&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;User&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,&quot;&quot;]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Role" FillInChoice="FALSE" Format="Dropdown" IsModern="TRUE" Name="Role" Title="Role" Type="Choice" ID="{4343c7c3-d895-438a-9e1b-adf4e6f4b502}" StaticName="Role" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" ColName="nvarchar7" RowOrdinal="0" SourceID="{{listid:Operational Plan Admin}}">
+              <CHOICES>
+                <CHOICE>Admin</CHOICE>
+                <CHOICE>User</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="User" DisplayName="AppUser" List="UserInfo" Required="TRUE" Indexed="TRUE" EnforceUniqueValues="TRUE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{08e2099e-29bf-465a-b89c-824af26e0c64}" StaticName="User" Name="User" Group="" Hidden="FALSE" Customization="" ReadOnly="FALSE" PITarget="" PrimaryPITarget="" PIAttribute="" PrimaryPIAttribute="" Aggregation="" Node="" ColName="int1" RowOrdinal="0" SourceID="{{listid:Operational Plan Admin}}" />
+            <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Name" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" EnableLookup="TRUE" ListItemMenuAllowed="Prohibited" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkFilenameNoMenu" />
+              </FieldRefs>
+              <DisplayPattern>
+                <IfEqual>
+                  <Expr1>
+                    <LookupColumn Name="FSObjType" />
+                  </Expr1>
+                  <Expr2>1</Expr2>
+                  <Then>
+                    <Field Name="LinkFilenameNoMenu" />
+                  </Then>
+                  <Else>
+                    <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                    <URL />
+                    <HTML><![CDATA[" onclick="EditLink2(this,]]></HTML>
+                    <Counter Type="View" />
+                    <HTML><![CDATA[);return false;" target="_self">]]></HTML>
+                    <Column HTMLEncode="TRUE" Name="Title" Default="(no title)" />
+                    <IfEqual>
+                      <Expr1>
+                        <GetVar Name="ShowAccessibleIcon" />
+                      </Expr1>
+                      <Expr2>1</Expr2>
+                      <Then>
+                        <HTML><![CDATA[<img src="/_layouts/15/images/blank.gif?rev=50" class="ms-hidden" border="0" width="1" height="1" alt="Use SHIFT+ENTER to open the menu (new window)."/>]]></HTML>
+                      </Then>
+                    </IfEqual>
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <IfNew>
+                      <HTML><![CDATA[<img src="/_layouts/1033/images/new.gif" alt="]]></HTML>
+                      <HTML>New</HTML>
+                      <HTML><![CDATA[" class="ms-newgif" />]]></HTML>
+                    </IfNew>
+                  </Else>
+                </IfEqual>
+              </DisplayPattern>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://power-apis-usgov001-public.azure-apihub.us/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-18.usgovtexas.logic.azure.us%252fworkflows%252f13b2aaf971234bf699a2b084bbf4b262%252ftriggers%252fWhen_an_item_is_created%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created%25252Fread%2526sv%253d1.0%2526sig%253d7DmIzOxmxlCWGVb9zbvjYqrqyNznGPZqj51SQUWTgBw" ExpiresInDays="3" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Operational Plans" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Operational Plans" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Operational Plans/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Operational Plans/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Operational Plans/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mdcourts.sharepoint.com/sites/StrategicCampaign2024-2029/StrategicPlan_Dev/Lists/Operational%20Plans/AllItems.aspx" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8B743C38-81BB-4961-8A6B-A2FF56D6F75D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Operational Plans/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=50">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="Title" />
+                <FieldRef Name="Year" />
+                <FieldRef Name="Organization_Committee" />
+                <FieldRef Name="Subcommittee_Department" />
+                <FieldRef Name="ResponsiblePerson" />
+                <FieldRef Name="AlternatePOC" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="LastUpdatedDate" />
+                <FieldRef Name="AdminNotes" />
+                <FieldRef Name="Approved" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="Last_x0020_Approved_x0020_Date" />
+                <FieldRef Name="ProjectPlanCode" />
+                <FieldRef Name="Organization_x003a_Organization" />
+                <FieldRef Name="Organization_x003a_ID" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <ColumnWidth>
+                <FieldRef Name="Organization_Committee" width="201.20001220703125" />
+              </ColumnWidth>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Operational Plan" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" FromBaseType="TRUE" Description="Year+Org+Dept" MaxLength="255" Indexed="TRUE" ColName="nvarchar1" RowOrdinal="0" Version="1" />
+            <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Operational Plan" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkTitleNoMenu" />
+                <FieldRef Name="_EditMenuTableStart2" />
+                <FieldRef Name="_EditMenuTableEnd" />
+              </FieldRefs>
+              <DisplayPattern>
+                <FieldSwitch>
+                  <Expr>
+                    <GetVar Name="FreeForm" />
+                  </Expr>
+                  <Case Value="TRUE">
+                    <Field Name="LinkTitleNoMenu" />
+                  </Case>
+                  <Default>
+                    <HTML><![CDATA[<div class="ms-vb itx" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                    <Field Name="_EditMenuTableStart2" />
+                    <HTML><![CDATA[">]]></HTML>
+                    <Field Name="LinkTitleNoMenu" />
+                    <HTML><![CDATA[</div>]]></HTML>
+                    <HTML><![CDATA[<div class="s4-ctx" onmouseover="OnChildItem(this.parentNode); return false;">]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[<a onfocus="OnChildItem(this.parentNode.parentNode); return false;" onclick="PopMenuFromChevron(event); return false;" href="javascript:;" title="Open Menu"></a>]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[</div>]]></HTML>
+                  </Default>
+                </FieldSwitch>
+              </DisplayPattern>
+            </Field>
+            <Field Type="Choice" DisplayName="Year" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{db3ee008-aed6-4e9a-a6b1-3d7b53aa3abc}" StaticName="Year" Name="Year" CustomFormatter="" ColName="nvarchar7" RowOrdinal="0" SourceID="{{listid:Operational Plans}}">
+              <Default>2025</Default>
+              <CHOICES>
+                <CHOICE>2025</CHOICE>
+                <CHOICE>2026</CHOICE>
+                <CHOICE>2027</CHOICE>
+                <CHOICE>2028</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Lookup" DisplayName="Organization" Required="TRUE" EnforceUniqueValues="FALSE" ShowField="Title" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" ID="{609a024b-8b80-482a-8d5a-1b339d6e593c}" StaticName="Organization_Committee" Name="Organization_Committee" Group="" Hidden="FALSE" Customization="" ReadOnly="FALSE" PITarget="" PrimaryPITarget="" PIAttribute="" PrimaryPIAttribute="" Aggregation="" Node="" List="{listid:Organization}" ColName="int1" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field DisplayName="Chair/Administrative Head" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="ResponsiblePerson" Required="FALSE" Title=" Responsible Person" Type="User" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{63266d3d-f108-4e0e-93af-1b42a9eb4b1e}" StaticName="ResponsiblePerson" EnforceUniqueValues="FALSE" Group="" ShowField="ImnName" Hidden="FALSE" ReadOnly="FALSE" PITarget="" PrimaryPITarget="" PIAttribute="" PrimaryPIAttribute="" Aggregation="" Node="" ColName="int2" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field DisplayName="Designees" Format="Dropdown" IsModern="TRUE" List="UserInfo" Mult="TRUE" Name="AlternatePOC" Title="Alternate POC" Type="UserMulti" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{d51fca9b-11e0-45c1-b466-6570d036a830}" StaticName="AlternatePOC" Required="FALSE" EnforceUniqueValues="FALSE" Group="" ShowField="ImnName" Hidden="FALSE" ReadOnly="FALSE" PITarget="" PrimaryPITarget="" PIAttribute="" PrimaryPIAttribute="" Aggregation="" Node="" ColName="int3" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Pending&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Submitted&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot; Under Review&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Approved&quot;]},&quot;sp-css-backgroundColor-BgCoral sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;@currentField&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Pending&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Submitted&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot; Under Review&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Approved&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,&quot;&quot;]}]}]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Status" FillInChoice="FALSE" Format="Dropdown" IsModern="TRUE" Name="Status" Required="TRUE" Title="Status" Type="Choice" ID="{f118b4c2-94b2-4949-9a85-1ac2268fb458}" StaticName="Status" EnforceUniqueValues="FALSE" Indexed="FALSE" ColName="nvarchar8" RowOrdinal="0" SourceID="{{listid:Operational Plans}}">
+              <CHOICES>
+                <CHOICE>Pending</CHOICE>
+                <CHOICE>Submitted</CHOICE>
+                <CHOICE>Published</CHOICE>
+              </CHOICES>
+              <Default>Pending</Default>
+            </Field>
+            <Field DisplayName=" Last Updated Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" IsModern="TRUE" Name="LastUpdatedDate" Required="TRUE" Title=" Last Updated Date" Type="DateTime" ID="{61a6370d-4fe7-4ba0-ac31-86e943c22d03}" StaticName="LastUpdatedDate" ColName="datetime1" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field AppendOnly="FALSE" DisplayName="Admin Notes" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="AdminNotes" RichText="FALSE" RichTextMode="Compatible" Title="Admin Notes" Type="Note" ID="{7e5dee13-8ced-462a-8441-72481f7e443e}" StaticName="AdminNotes" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field DisplayName="Subcommittee/Department/Workgroup" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Subcommittee_Department" Title="Subcommittee_Department" Type="Text" ID="{a5f1f0e4-90cd-4f73-a91a-2af6649744b7}" StaticName="Subcommittee_Department" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ColName="nvarchar9" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field Type="Boolean" DisplayName="Approved" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{5ec1b5f6-b433-49f0-beb4-d938bc779401}" StaticName="Approved" Name="Approved" ColName="bit1" RowOrdinal="0" SourceID="{{listid:Operational Plans}}">
+              <Default>0</Default>
+            </Field>
+            <Field Type="DateTime" DisplayName="Last Approved Date" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{8ce4b2c7-0a47-4a7c-b364-f2411dcbe53f}" StaticName="Last_x0020_Approved_x0020_Date" Name="Last_x0020_Approved_x0020_Date" ColName="datetime2" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field Type="Text" DisplayName="ProjectPlanCode" Required="FALSE" EnforceUniqueValues="TRUE" Indexed="TRUE" MaxLength="255" ID="{fc2dda08-ca9c-4af2-b330-96bd0c59fd1e}" StaticName="ProjectPlanCode" Name="ProjectPlanCode" ColName="nvarchar10" RowOrdinal="0" SourceID="{{listid:Operational Plans}}" />
+            <Field Type="Lookup" DisplayName="Organization:Organization" ShowField="Title" FieldRef="609a024b-8b80-482a-8d5a-1b339d6e593c" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{865ecf4b-1394-491e-83e9-597fcbb5beab}" StaticName="Organization_x003a_Organization" Name="Organization_x003a_Organization" List="{listid:Organization}" SourceID="{{listid:Operational Plans}}" />
+            <Field Type="Lookup" DisplayName="Organization:ID" ShowField="ID" FieldRef="609a024b-8b80-482a-8d5a-1b339d6e593c" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{9d5f2841-0193-4eb9-be35-b7554faa340b}" StaticName="Organization_x003a_ID" Name="Organization_x003a_ID" List="{listid:Organization}" SourceID="{{listid:Operational Plans}}" />
+            <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Operational Plan" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" EnableLookup="TRUE" ListItemMenuAllowed="Prohibited" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkFilenameNoMenu" />
+              </FieldRefs>
+              <DisplayPattern>
+                <IfEqual>
+                  <Expr1>
+                    <LookupColumn Name="FSObjType" />
+                  </Expr1>
+                  <Expr2>1</Expr2>
+                  <Then>
+                    <Field Name="LinkFilenameNoMenu" />
+                  </Then>
+                  <Else>
+                    <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                    <URL />
+                    <HTML><![CDATA[" onclick="EditLink2(this,]]></HTML>
+                    <Counter Type="View" />
+                    <HTML><![CDATA[);return false;" target="_self">]]></HTML>
+                    <Column HTMLEncode="TRUE" Name="Title" Default="(no title)" />
+                    <IfEqual>
+                      <Expr1>
+                        <GetVar Name="ShowAccessibleIcon" />
+                      </Expr1>
+                      <Expr2>1</Expr2>
+                      <Then>
+                        <HTML><![CDATA[<img src="/_layouts/15/images/blank.gif?rev=50" class="ms-hidden" border="0" width="1" height="1" alt="Use SHIFT+ENTER to open the menu (new window)."/>]]></HTML>
+                      </Then>
+                    </IfEqual>
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <IfNew>
+                      <HTML><![CDATA[<img src="/_layouts/1033/images/new.gif" alt="]]></HTML>
+                      <HTML>New</HTML>
+                      <HTML><![CDATA[" class="ms-newgif" />]]></HTML>
+                    </IfNew>
+                  </Else>
+                </IfEqual>
+              </DisplayPattern>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://power-apis-usgov001-public.azure-apihub.us/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-16.usgovtexas.logic.azure.us%252fworkflows%252f86d9e38560694e9a81c087cef7d92971%252ftriggers%252fWhen_an_item_is_created%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created%25252Fread%2526sv%253d1.0%2526sig%253dwmN8hyd1RbISAwOuSjtaaTdx_ejxuglAj5YQ173cejM" ExpiresInDays="3" />
+            <pnp:Webhook ServerNotificationUrl="https://power-apis-usgov001-public.azure-apihub.us/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-37.usgovtexas.logic.azure.us%252fworkflows%252f0a05d6ee9db1483cb21894e85c795a7f%252ftriggers%252fWhen_an_item_is_created_or_modified%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created_or_modified%25252Fread%2526sv%253d1.0%2526sig%253dOdjvCKeDHE_90-4NseitN1GhNPNxcvjvuBvhPY8dBx8" ExpiresInDays="3" />
+            <pnp:Webhook ServerNotificationUrl="https://usgovvirginia1-0.pushnp.svc.ms/notifications?token=ns_cb80dbf7-1c79-4290-81f7-7ae18cdbd2a2" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="OpPlan Approved Staging List" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/OpPlan Approved Staging List" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/OpPlan Approved Staging List/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/OpPlan Approved Staging List/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/OpPlan Approved Staging List/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="wte_Source" Value="https://mdcourts.sharepoint.com/sites/StrategicCampaign2024-2029/StrategicPlan_Dev/Lists/OpPlan%20Approved%20Staging%20List/AllItems.aspx" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{1902BCD9-5DA1-4F00-A6E9-23F5DCAFCAA6}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/OpPlan Approved Staging List/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=50">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="Project_x0020_Name" />
+                <FieldRef Name="OperationalPlan" />
+                <FieldRef Name="Task_x0020_Description" />
+                <FieldRef Name="Task_x0020_Updates" />
+                <FieldRef Name="Project_x0020_Description" />
+                <FieldRef Name="Strategic_x0020_Init" />
+                <FieldRef Name="Strategic_x0020_Priorities" />
+                <FieldRef Name="Project_x0020_Status" />
+                <FieldRef Name="Project_x0020_Last_x0020_Modifie" />
+                <FieldRef Name="project_x0020_plan" />
+                <FieldRef Name="project_x0020_plan_x003a_Modifie" />
+                <FieldRef Name="Project_x0020_Targeted_x0020_Dat" />
+                <FieldRef Name="Project_x0020_Plan_x003a_Project" />
+                <FieldRef Name="Operational_x0020_Plan_x003a_Ope" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="Operational Plan" Format="Dropdown" Indexed="FALSE" IsModern="TRUE" Name="OperationalPlan" ShowField="ID" Title="Operational Plan" Type="Lookup" ID="{c79ed00b-186b-4bbe-bba7-ae4c24176669}" StaticName="OperationalPlan" List="{listid:Operational Plans}" ColName="int1" RowOrdinal="0" SourceID="{{listid:OpPlan Approved Staging List}}" Required="FALSE" EnforceUniqueValues="FALSE" Group="" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" Version="1" />
+            <Field AppendOnly="FALSE" ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Project Tasks" Format="Dropdown" IsolateStyles="TRUE" Name="Task_x0020_Description" RichText="TRUE" RichTextMode="FullHtml" Title="Project Tasks" Type="Note" ID="{ddff11cc-ff7d-46fc-a5bd-4195443a8de9}" Version="2" StaticName="Task_x0020_Description" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="ntext2" RowOrdinal="0" />
+            <Field AppendOnly="FALSE" ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Project Task Updates" Format="Dropdown" IsolateStyles="TRUE" Name="Task_x0020_Updates" RichText="TRUE" RichTextMode="FullHtml" Title="Project Task Updates" Type="Note" ID="{d8df300e-f866-4767-a91c-8c560af32a52}" Version="2" StaticName="Task_x0020_Updates" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="ntext3" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Project Name" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{cd3fbb1c-fe05-4add-9d24-84fef146cedf}" StaticName="Project_x0020_Name" Name="Project_x0020_Name" ColName="nvarchar7" RowOrdinal="0" SourceID="{{listid:OpPlan Approved Staging List}}" />
+            <Field AppendOnly="FALSE" ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Description" Format="Dropdown" IsolateStyles="TRUE" Name="Project_x0020_Description" RichText="TRUE" RichTextMode="FullHtml" Title="Description" Type="Note" ID="{f40d4353-92b0-4f5f-9f82-5d1de41dc73e}" Version="2" StaticName="Project_x0020_Description" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="ntext4" RowOrdinal="0" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Strategic Initative" Format="Dropdown" MaxLength="255" Name="Strategic_x0020_Init" Title="Strategic Initative" Type="Text" ID="{de221e55-1e4a-425e-bdae-93bf0af86160}" Version="2" StaticName="Strategic_x0020_Init" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Strategic Priorities" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{ff88520a-d8cd-4640-9305-6c0c8d5d0db7}" StaticName="Strategic_x0020_Priorities" Name="Strategic_x0020_Priorities" ColName="nvarchar9" RowOrdinal="0" SourceID="{{listid:OpPlan Approved Staging List}}" />
+            <Field Type="Text" DisplayName="Project Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{1c9cea13-51c4-483b-8854-6b6f206b4570}" StaticName="Project_x0020_Status" Name="Project_x0020_Status" ColName="nvarchar10" RowOrdinal="0" SourceID="{{listid:OpPlan Approved Staging List}}" />
+            <Field Type="DateTime" DisplayName="Project Last Modified Date" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{839508b9-b3a0-4f48-ab94-f28da2dd8052}" StaticName="Project_x0020_Last_x0020_Modifie" Name="Project_x0020_Last_x0020_Modifie" CustomFormatter="" CalType="0" ColName="datetime1" RowOrdinal="0" SourceID="{{listid:OpPlan Approved Staging List}}" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Project Plan" Format="Dropdown" Indexed="FALSE" List="{listid:Project Plan}" Name="project_x0020_plan" ShowField="ID" Title="Project Plan" Type="Lookup" ID="{5497a1de-b6d2-4e0f-b384-9b09db45f823}" Version="3" StaticName="project_x0020_plan" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="int2" RowOrdinal="0" Required="FALSE" EnforceUniqueValues="FALSE" Group="" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Project Plan Modified" Format="Dropdown" Name="project_x0020_plan_x003a_Modifie" Title="Project Plan Modified" Type="Lookup" ID="{f6945fcb-a551-43b8-8a97-f3ace186d2e3}" Version="3" FieldRef="5497a1de-b6d2-4e0f-b384-9b09db45f823" List="{listid:Project Plan}" ShowField="Modified" ReadOnly="TRUE" StaticName="project_x0020_plan_x003a_Modifie" SourceID="{{listid:OpPlan Approved Staging List}}" Group="Custom Columns" UnlimitedLengthInDocumentLibrary="FALSE" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Target Completion Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="Project_x0020_Targeted_x0020_Dat" Title="Target Completion Date" Type="DateTime" ID="{f9b7a2c9-4c55-4a21-ab29-f826c8ffba92}" Version="2" StaticName="Project_x0020_Targeted_x0020_Dat" SourceID="{{listid:OpPlan Approved Staging List}}" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="Lookup" DisplayName="Project Plan:Project Name" List="{listid:Project Plan}" WebId="{siteid}" ShowField="Title" FieldRef="5497a1de-b6d2-4e0f-b384-9b09db45f823" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{0b968fab-8ee1-4d5e-b491-99cff21decd4}" SourceID="{{listid:OpPlan Approved Staging List}}" StaticName="Project_x0020_Plan_x003a_Project" Name="Project_x0020_Plan_x003a_Project" Version="1" />
+            <Field Type="Lookup" DisplayName="Operational Plan:Operational Plan" List="{listid:Operational Plans}" WebId="{siteid}" ShowField="Title" FieldRef="c79ed00b-186b-4bbe-bba7-ae4c24176669" ReadOnly="TRUE" UnlimitedLengthInDocumentLibrary="FALSE" ID="{00b4a9be-058e-474a-bd77-ba9cc949dffd}" SourceID="{{listid:OpPlan Approved Staging List}}" StaticName="Operational_x0020_Plan_x003a_Ope" Name="Operational_x0020_Plan_x003a_Ope" Version="1" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Organization" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Organization" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Organization/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Organization/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Organization/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{E0C5BAF7-CDAB-4624-B7EC-3B10A149D500}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Organization/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=50">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Organization" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Organization" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" FromBaseType="TRUE" MaxLength="255" Indexed="FALSE" ColName="nvarchar1" RowOrdinal="0" />
+            <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Organization" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" EnableLookup="TRUE" ListItemMenuAllowed="Prohibited" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkFilenameNoMenu" />
+              </FieldRefs>
+              <DisplayPattern>
+                <IfEqual>
+                  <Expr1>
+                    <LookupColumn Name="FSObjType" />
+                  </Expr1>
+                  <Expr2>1</Expr2>
+                  <Then>
+                    <Field Name="LinkFilenameNoMenu" />
+                  </Then>
+                  <Else>
+                    <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                    <URL />
+                    <HTML><![CDATA[" onclick="EditLink2(this,]]></HTML>
+                    <Counter Type="View" />
+                    <HTML><![CDATA[);return false;" target="_self">]]></HTML>
+                    <Column HTMLEncode="TRUE" Name="Title" Default="(no title)" />
+                    <IfEqual>
+                      <Expr1>
+                        <GetVar Name="ShowAccessibleIcon" />
+                      </Expr1>
+                      <Expr2>1</Expr2>
+                      <Then>
+                        <HTML><![CDATA[<img src="/_layouts/15/images/blank.gif?rev=50" class="ms-hidden" border="0" width="1" height="1" alt="Use SHIFT+ENTER to open the menu (new window)."/>]]></HTML>
+                      </Then>
+                    </IfEqual>
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <IfNew>
+                      <HTML><![CDATA[<img src="/_layouts/1033/images/new.gif" alt="]]></HTML>
+                      <HTML>New</HTML>
+                      <HTML><![CDATA[" class="ms-newgif" />]]></HTML>
+                    </IfNew>
+                  </Else>
+                </IfEqual>
+              </DisplayPattern>
+            </Field>
+            <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Organization" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkTitleNoMenu" />
+                <FieldRef Name="_EditMenuTableStart2" />
+                <FieldRef Name="_EditMenuTableEnd" />
+              </FieldRefs>
+              <DisplayPattern>
+                <FieldSwitch>
+                  <Expr>
+                    <GetVar Name="FreeForm" />
+                  </Expr>
+                  <Case Value="TRUE">
+                    <Field Name="LinkTitleNoMenu" />
+                  </Case>
+                  <Default>
+                    <HTML><![CDATA[<div class="ms-vb itx" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                    <Field Name="_EditMenuTableStart2" />
+                    <HTML><![CDATA[">]]></HTML>
+                    <Field Name="LinkTitleNoMenu" />
+                    <HTML><![CDATA[</div>]]></HTML>
+                    <HTML><![CDATA[<div class="s4-ctx" onmouseover="OnChildItem(this.parentNode); return false;">]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[<a onfocus="OnChildItem(this.parentNode.parentNode); return false;" onclick="PopMenuFromChevron(event); return false;" href="javascript:;" title="Open Menu"></a>]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[</div>]]></HTML>
+                  </Default>
+                </FieldSwitch>
+              </DisplayPattern>
+            </Field>
+            <Field CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Committe&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Department&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Court&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Commission&quot;]},&quot;sp-css-backgroundColor-BgCoral sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;@currentField&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Committe&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Department&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Court&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Commission&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,&quot;&quot;]}]}]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Organization Type" FillInChoice="FALSE" Format="Dropdown" IsModern="TRUE" Name="Organization" Title="Organization" Type="Choice" ID="{e8b1ffa1-d407-42f1-a751-a7fa03a1ba3a}" StaticName="Organization" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ColName="nvarchar7" RowOrdinal="0" SourceID="{{listid:Organization}}">
+              <CHOICES>
+                <CHOICE>Committee</CHOICE>
+                <CHOICE>Department</CHOICE>
+                <CHOICE>Court</CHOICE>
+                <CHOICE>Commission</CHOICE>
+              </CHOICES>
+            </Field>
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://usgovvirginia1-0.pushnp.svc.ms/notifications?token=ns_376bd0d6-48cd-46ad-92f5-49582dd60eb8" ExpiresInDays="2" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Project Plan" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Project Plan" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Project Plan/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Project Plan/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Project Plan/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{CF5BADFE-D266-49F1-A5A2-F5ED1A5A5453}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Project Plan/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=50">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="OperationalPlan" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Project_x0020_Tasks" />
+                <FieldRef Name="Project_x0020_Task_x0020_Updates" />
+                <FieldRef Name="StrategicInit" />
+                <FieldRef Name="Strategic_x0020_Priorities" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="TaskUpdatedDate" />
+                <FieldRef Name="Targeted_x0020_Date" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="LockedOn" />
+                <FieldRef Name="LockedBy" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Project Name" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" FromBaseType="TRUE" MaxLength="255" Indexed="FALSE" ColName="nvarchar1" RowOrdinal="0" />
+            <Field ID="{bc91a437-52e7-49e1-8c4e-4698904b2b6d}" ReadOnly="TRUE" Type="Computed" Name="LinkTitleNoMenu" DisplayName="Project Name" Dir="" DisplayNameSrcField="Title" AuthoringInfo="(linked to item)" EnableLookup="TRUE" ListItemMenuAllowed="Prohibited" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitleNoMenu" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkFilenameNoMenu" />
+              </FieldRefs>
+              <DisplayPattern>
+                <IfEqual>
+                  <Expr1>
+                    <LookupColumn Name="FSObjType" />
+                  </Expr1>
+                  <Expr2>1</Expr2>
+                  <Then>
+                    <Field Name="LinkFilenameNoMenu" />
+                  </Then>
+                  <Else>
+                    <HTML><![CDATA[<a onfocus="OnLink(this)" href="]]></HTML>
+                    <URL />
+                    <HTML><![CDATA[" onclick="EditLink2(this,]]></HTML>
+                    <Counter Type="View" />
+                    <HTML><![CDATA[);return false;" target="_self">]]></HTML>
+                    <Column HTMLEncode="TRUE" Name="Title" Default="(no title)" />
+                    <IfEqual>
+                      <Expr1>
+                        <GetVar Name="ShowAccessibleIcon" />
+                      </Expr1>
+                      <Expr2>1</Expr2>
+                      <Then>
+                        <HTML><![CDATA[<img src="/_layouts/15/images/blank.gif?rev=50" class="ms-hidden" border="0" width="1" height="1" alt="Use SHIFT+ENTER to open the menu (new window)."/>]]></HTML>
+                      </Then>
+                    </IfEqual>
+                    <HTML><![CDATA[</a>]]></HTML>
+                    <IfNew>
+                      <HTML><![CDATA[<img src="/_layouts/1033/images/new.gif" alt="]]></HTML>
+                      <HTML>New</HTML>
+                      <HTML><![CDATA[" class="ms-newgif" />]]></HTML>
+                    </IfNew>
+                  </Else>
+                </IfEqual>
+              </DisplayPattern>
+            </Field>
+            <Field ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" ReadOnly="TRUE" Type="Computed" Name="LinkTitle" DisplayName="Project Name" DisplayNameSrcField="Title" ClassInfo="Menu" AuthoringInfo="(linked to item with edit menu)" ListItemMenuAllowed="Required" LinkToItemAllowed="Prohibited" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="LinkTitle" FromBaseType="TRUE">
+              <FieldRefs>
+                <FieldRef Name="Title" />
+                <FieldRef Name="LinkTitleNoMenu" />
+                <FieldRef Name="_EditMenuTableStart2" />
+                <FieldRef Name="_EditMenuTableEnd" />
+              </FieldRefs>
+              <DisplayPattern>
+                <FieldSwitch>
+                  <Expr>
+                    <GetVar Name="FreeForm" />
+                  </Expr>
+                  <Case Value="TRUE">
+                    <Field Name="LinkTitleNoMenu" />
+                  </Case>
+                  <Default>
+                    <HTML><![CDATA[<div class="ms-vb itx" onmouseover="OnItem(this)" CTXName="ctx]]></HTML>
+                    <Field Name="_EditMenuTableStart2" />
+                    <HTML><![CDATA[">]]></HTML>
+                    <Field Name="LinkTitleNoMenu" />
+                    <HTML><![CDATA[</div>]]></HTML>
+                    <HTML><![CDATA[<div class="s4-ctx" onmouseover="OnChildItem(this.parentNode); return false;">]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[<a onfocus="OnChildItem(this.parentNode.parentNode); return false;" onclick="PopMenuFromChevron(event); return false;" href="javascript:;" title="Open Menu"></a>]]></HTML>
+                    <HTML><![CDATA[<span>&nbsp;</span>]]></HTML>
+                    <HTML><![CDATA[</div>]]></HTML>
+                  </Default>
+                </FieldSwitch>
+              </DisplayPattern>
+            </Field>
+            <Field DisplayName="Operational Plan" Format="Dropdown" Indexed="TRUE" IsModern="TRUE" Name="OperationalPlan" ShowField="Title" Title="Operational Plan" Type="Lookup" ID="{33a7c9b2-6730-4d7a-90df-660fc1f04162}" StaticName="OperationalPlan" Required="TRUE" EnforceUniqueValues="FALSE" Group="" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="Cascade" Hidden="FALSE" Customization="" ReadOnly="FALSE" PITarget="" PrimaryPITarget="" PIAttribute="" PrimaryPIAttribute="" Aggregation="" Node="" List="{listid:Operational Plans}" ColName="int1" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field AppendOnly="FALSE" DisplayName="Description" Format="Dropdown" IsModern="TRUE" IsolateStyles="FALSE" Name="Description" RichText="FALSE" RichTextMode="Compatible" Title="Description" Type="Note" ID="{2483ba4d-95bb-4b0c-a501-85630b1800f2}" StaticName="Description" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RestrictedMode="TRUE" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;1. Promote Accountability and Public Trust&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;2. Improve Access to Justice&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;3. Foster a Healthy, Diverse, and Productive Workforce&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;4. Encourage a Service-Oriented Approach to Court Operations&quot;]},&quot;sp-css-backgroundColor-BgCoral sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;5. Use Technology Effectively and Responsibly&quot;]},&quot;sp-css-backgroundColor-BgDustRose sp-field-fontSizeSmall sp-css-color-DustRoseFont&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;@currentField&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;1. Promote Accountability and Public Trust&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;2. Improve Access to Justice&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;3. Foster a Healthy, Diverse, and Productive Workforce&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;4. Encourage a Service-Oriented Approach to Court Operations&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;5. Use Technology Effectively and Responsibly&quot;]},&quot;sp-field-fontSizeSmall sp-css-color-DustRoseFont&quot;,&quot;&quot;]}]}]}]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Strategic Initiative" FillInChoice="FALSE" Format="Dropdown" IsModern="TRUE" Name="StrategicInit" Title="Strategic Init" Type="Choice" ID="{51a10d9b-a92b-4ba2-9a95-67fda4d5f6f2}" StaticName="StrategicInit" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ColName="nvarchar7" RowOrdinal="0" SourceID="{{listid:Project Plan}}">
+              <CHOICES>
+                <CHOICE>1. Promote Accountability and Public Trust</CHOICE>
+                <CHOICE>2. Improve Access to Justice</CHOICE>
+                <CHOICE>3. Foster a Healthy, Diverse, and Productive Workforce</CHOICE>
+                <CHOICE>4. Encourage a Service-Oriented Approach to Court Operations</CHOICE>
+                <CHOICE>5. Use Technology Effectively and Responsibly</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Strategic Priorities" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{64ea1f17-7d07-4a87-8713-52c162866406}" StaticName="Strategic_x0020_Priorities" Name="Strategic_x0020_Priorities" ColName="nvarchar8" RowOrdinal="0" SourceID="{{listid:Project Plan}}">
+              <CHOICES>
+                <CHOICE>Promote Accountability and Public Trust</CHOICE>
+                <CHOICE>1.1 Promote excellence throughout the Judiciary.</CHOICE>
+                <CHOICE>1.2 Maximize timely and accurate access to public information.</CHOICE>
+                <CHOICE>1.3 Enhance public knowledge about the courts through community outreach and civics education.</CHOICE>
+                <CHOICE>1.4 Hold judges and judiciary personnel to high ethical standards.</CHOICE>
+                <CHOICE>1.5 Provide timely disposition of cases.</CHOICE>
+                <CHOICE>1.6 Use plain language to make information relatable and understandable.</CHOICE>
+                <CHOICE>1.7 Be responsive to community needs and evolving expectations.</CHOICE>
+                <CHOICE>Improve Access to Justice</CHOICE>
+                <CHOICE>2.1 Make court facilities accessible to all.</CHOICE>
+                <CHOICE>2.2 Provide resources for self-represented litigants to access and navigate the court system.</CHOICE>
+                <CHOICE>2.3 Support community programs to assist court users.</CHOICE>
+                <CHOICE>2.4 Encourage consistency in court practices and messaging.</CHOICE>
+                <CHOICE>2.5 Use innovative technology to facilitate court proceedings.</CHOICE>
+                <CHOICE>2.6 Identify and reduce communication barriers.</CHOICE>
+                <CHOICE>2.7 Continue to develop safety resources and protocols to maintain a secure environment for court staff and litigants.</CHOICE>
+                <CHOICE>2.8 Expand educational programs for the Judiciary’s workforce on access-related issues.</CHOICE>
+                <CHOICE>2.9 Work to reduce financial barriers to accessing justice.</CHOICE>
+                <CHOICE>Foster a Healthy, Diverse, and Productive Workforce</CHOICE>
+                <CHOICE>3.1 Foster workforce advancement by providing educational opportunities and career-path development.</CHOICE>
+                <CHOICE>3.2 Prioritize the physical security of its workforce.</CHOICE>
+                <CHOICE>3.3 Listen and be responsive to the needs of its workforce.</CHOICE>
+                <CHOICE>3.4 Communicate changes, updates, and opportunities to its workforce efficiently and effectively.</CHOICE>
+                <CHOICE>3.5 Provide its workforce the necessary skills and knowledge to excel and adapt to evolving job requirements.</CHOICE>
+                <CHOICE>3.6 Leverage technology to support the needs of its workforce.</CHOICE>
+                <CHOICE>3.7 Review policies and procedures to promote a healthy, diverse, and productive workforce.</CHOICE>
+                <CHOICE>Encourage a Service-Oriented Approach to Court Operations</CHOICE>
+                <CHOICE>4.1 Identify ways to establish consistent statewide policies, practices, and procedures while maintaining flexibility to meet community needs.</CHOICE>
+                <CHOICE>4.2 Encourage a culture that invites stakeholder feedback to improve court operations and create a structure to ensure consistent outreach.</CHOICE>
+                <CHOICE>4.3 Promote use of best practices to manage court operations and dockets.</CHOICE>
+                <CHOICE>4.4 Improve communication to make information understandable for court users.</CHOICE>
+                <CHOICE>4.5 Modernize methods for communicating with court users. </CHOICE>
+                <CHOICE>Use Technology Effectively and Responsibly</CHOICE>
+                <CHOICE>5.1 Promote the appropriate use of resources and technology.</CHOICE>
+                <CHOICE>5.2 Embrace technological innovations to enhance court accessibility and improve Judiciary operations.</CHOICE>
+                <CHOICE>5.3 Improve efficiency and productivity through the use of secure access to information and services.</CHOICE>
+                <CHOICE>5.4 Maintain secure data and information systems to protect private and confidential information.</CHOICE>
+                <CHOICE>5.5 Adapt to changing technological needs of the Judiciary and court users.</CHOICE>
+                <CHOICE>5.6 Enhance access to and quality of court information.  </CHOICE>
+              </CHOICES>
+            </Field>
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;On Target&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-css-color-CornflowerBlueFont sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Delayed&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-css-color-MintGreenFont sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Hard stop&quot;]},&quot;sp-css-backgroundColor-BgGold sp-css-color-GoldFont sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Complete&quot;]},&quot;sp-css-backgroundColor-BgCoral sp-css-color-CoralFont sp-css-color-CoralFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Planned&quot;]},&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;In Progress&quot;]},&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}]}]}},&quot;children&quot;:[{&quot;elmType&quot;:&quot;span&quot;,&quot;style&quot;:{&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;padding&quot;:&quot;0 3px&quot;},&quot;txtContent&quot;:&quot;[$Status]&quot;,&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;On Target&quot;]},&quot;sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Delayed&quot;]},&quot;sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Hard stop&quot;]},&quot;sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Complete&quot;]},&quot;sp-css-color-CoralFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;Planned&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$Status]&quot;,&quot;In Progress&quot;]},&quot;&quot;,&quot;&quot;]}]}]}]}]}]}]}}}]}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Project Status" FillInChoice="FALSE" Format="Dropdown" Name="Status" Title="Project Status" Type="Choice" ID="{c840df31-5f95-469e-9bc0-901105bdd172}" Version="2" StaticName="Status" SourceID="{{listid:Project Plan}}" ColName="nvarchar9" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>Planned</CHOICE>
+                <CHOICE>In Progress</CHOICE>
+                <CHOICE>Delayed</CHOICE>
+                <CHOICE>Complete</CHOICE>
+              </CHOICES>
+              <Default>Planned</Default>
+            </Field>
+            <Field DisplayName="Task Updated Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" IsModern="TRUE" Name="TaskUpdatedDate" Title="Task Updated Date" Type="DateTime" ID="{ee1a8f23-487d-4a72-b712-ed36710fd101}" StaticName="TaskUpdatedDate" ColName="datetime1" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field Type="Note" DisplayName="Project Tasks" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="Compatible" IsolateStyles="FALSE" Sortable="FALSE" ID="{39889cd7-6575-47a2-a943-fbb93bd35f5b}" StaticName="Project_x0020_Tasks" Name="Project_x0020_Tasks" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" ColName="ntext3" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field Type="DateTime" DisplayName="Targeted Date" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{44ab4734-be12-43ab-938e-a2003e4f5d37}" StaticName="Targeted_x0020_Date" Name="Targeted_x0020_Date" ColName="datetime2" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field Name="Project_x0020_Task_x0020_Updates" FromBaseType="FALSE" Type="Note" DisplayName="Project Task Updates" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="Compatible" Sortable="FALSE" ID="{b574a61c-0fd2-4dc8-8580-340642ec9daa}" StaticName="Project_x0020_Task_x0020_Updates" CustomFormatter="" RestrictedMode="TRUE" IsolateStyles="FALSE" AppendOnly="FALSE" ColName="ntext4" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field Type="DateTime" DisplayName="LockedOn" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{8590da61-ece7-44f0-9a04-b44e84ab619f}" StaticName="LockedOn" Name="LockedOn" CustomFormatter="" CalType="0" ColName="datetime3" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+            <Field Type="User" DisplayName="LockedBy" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{c386b50e-069b-440f-a028-249392fdc744}" StaticName="LockedBy" Name="LockedBy" ColName="int2" RowOrdinal="0" SourceID="{{listid:Project Plan}}" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." DocumentTemplate="{site}/SiteAssets/Forms/template.doc" TemplateType="101" Url="SiteAssets" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/SiteAssets/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SiteAssets/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SiteAssets/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="IsAttachmentLibrary" Value="1" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{0863378B-10AA-4578-9BE2-E262D5957512}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/SiteAssets/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b}" ColName="tp_CheckoutUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" Name="CheckoutUser" DisplaceOnUpgrade="TRUE" DisplayName="Checked Out To" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CheckoutUser" FromBaseType="TRUE" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Color Tag" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+            <pnp:FieldRef ID="cb19284a-cde7-4570-a980-1dab8bd74470" Name="_ExtendedDescription" DisplayName="Description" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itwp.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B" />
+            <pnp:ContentTypeBinding ContentTypeID="0x010108" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010901" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800EE3B4FE2C29A4DCDB55229ADEB3DBFE4" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{EA3A89C2-8180-456B-9A1F-6701528CCE6A}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{D005A7C4-9D73-4673-99E7-7F92290F9158}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="2" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{3EBBD73A-11F9-4735-84E2-C6F693ECC7EF}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="3" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Author" />
+                    <Value Type="Integer">
+                      <UserID />
+                    </Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{5BE66ABE-734C-4F79-B614-7F74751AE694}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Author" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="Modified" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{59F28457-3CAF-4B88-AE20-552B6688950E}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="5" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=50">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Editor" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field ID="{3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b}" ColName="tp_CheckoutUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" Name="CheckoutUser" DisplaceOnUpgrade="TRUE" DisplayName="Checked Out To" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CheckoutUser" FromBaseType="TRUE" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c33527b4-d920-4587-b791-45024d00068a" Name="WikiField" DisplayName="Wiki Content" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+            <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" DisplayName="Authoring Canvas Content" />
+            <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" DisplayName="Banner Image URL" />
+            <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" DisplayName="Description" />
+            <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" DisplayName="Promoted State" />
+            <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" DisplayName="First Published Date" />
+            <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" DisplayName="Page Layout Content" />
+            <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" DisplayName="Author Byline" />
+            <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" DisplayName="Topic header" />
+            <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" DisplayName="Site Page Flags" />
+            <pnp:FieldRef ID="9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2" Name="_SPCallToAction" DisplayName="Call To Action" />
+            <pnp:FieldRef ID="0e7b982f-698a-4d0c-aacb-f16906f66d30" Name="_OriginalSourceUrl" DisplayName="Original Source Url" />
+            <pnp:FieldRef ID="36193413-dd5c-4096-8c1e-1b40098b9ba3" Name="_OriginalSourceSiteId" DisplayName="Original Source Site ID" />
+            <pnp:FieldRef ID="3477a5bc-c605-4b2e-a7c1-8db8f13c017e" Name="_OriginalSourceWebId" DisplayName="Original Source Web ID" />
+            <pnp:FieldRef ID="139da674-dbf6-439f-98e0-4eb05fa9a669" Name="_OriginalSourceListId" DisplayName="Original Source List ID" />
+            <pnp:FieldRef ID="91e86a43-75f2-426f-80da-35edfb47d55d" Name="_OriginalSourceItemId" DisplayName="Original Source Item ID" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
